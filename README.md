@@ -42,4 +42,15 @@ To run `dijkstra`, simply execute the following:
 
 Two files are provided for testing the example graph: `example.graph` and `example.test`.
 To test the `dijkstra` utility, provide `example.graph` as the input graph.
-Then, compare the output file `<YOUR_OUTPUT_FILE>` with `example.test` using `diff <YOUR_OUTPUT_FILE> example.test`.
+Make the starting vertex `v1`.
+Then, compare the output file `YOUR_OUTPUT_FILE` with `example.test` using `diff YOUR_OUTPUT_FILE example.test`.
+
+## Graph File Structure
+
+Graph files can be created using the following line structure:
+
+```
+VERTEX_X VERTEX_Y EDGE_COST
+```
+
+Each line creates a vertex `VERTEX_X` and a vertex `VERTEX_Y` (if they do not exist), as well as an edge of weight `EDGE_COST` among the two.  *Important: Dijkstra's algorithm does not accept negative edge costs.*
